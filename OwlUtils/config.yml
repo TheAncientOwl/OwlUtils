@@ -1,0 +1,106 @@
+# ===================================== #
+#     OwlUtils developed by Bufnita     #
+# ===================================== #
+#================= INFO =================#
+#- permission -> owl.utils.use -> allow to some plugin commands
+#- if you enable or disable features, effects will be seen after a server restart
+#- aviable sounds at https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+
+console-player-list:
+  format: 'ONLINE PLAYERS ({amount}):{players}'
+  separator : " | "
+  
+#================= INFO =================#
+#- permission -> owl.mention.recive -> allow to recive notification
+#TIP: If you want to notify all users on your server is better to use mentionAll.
+mention-notifier:
+  enabled: false
+  notification: '&9&oHey! &b&o{PLAYER} mentioned your name in chat&8&o!'
+  sound: ENTITY_ARROW_HIT_PLAYER
+
+#================= INFO =================#
+#- permission -> owl.caps.bypass
+#- caps-letters and extension-letters are the amount of letters allowed in caps/extension per word
+caps-control:
+  enabled: false
+  caps-letters: 3
+  extension-letters: 5
+
+#=============== OPTIMIZE ===============#
+#merge caps control in mention notifier in the same chat listener
+#this will override caps-control.endabled and mention-notifier.enabled
+#WARN: all players will be notified when mentioned!
+optimizeCapsControlAndMentionNotifier: true
+  
+#================= INFO =================#
+#- permission -> owl.break.notify    -> allow to recive notification
+#- permission -> owl.break.incognito -> allow to break blocks without sending notifications to players
+#- blocks should be in uppercase
+ore-anouncer:
+  enabled: false
+  notification: '&8&oHey! &7&o{PLAYER} has mined a {BLOCK}&8&o!'
+  blocks-to-anounce:
+  - DIAMOND_ORE
+  - SPAWNER
+
+#================= INFO =================#
+broadcaster:
+  enabled: false
+  prefix: '&8|> '
+  interval: 3000
+  messages: []
+
+#================= INFO =================#
+#- permission -> owl.change.spawner -> allow to change mob-spawner's type
+no-spawner-change:
+  enabled: true
+  prefix: '&7&oSpawner &8| '
+  no-perm: '&7&oYou can''t change this&8&o!'
+  
+#================= INFO =================#
+#- permission -> owl.staff.chat
+staff-chat:
+  format: '&2Staff &8<&7{PLAYER}&8> &a{MESSAGE}'
+  first-char: '@'
+  
+#================= INFO =================#
+#- permission -> owl.givel.all -> allow to use giveall command
+giveall:
+  prefix: '&7&oGiveall &8| '
+  message: '&7&oYou received &&8&o{AMOUNT} {ITEM}&7&o!'
+  success: '&7&oSuccess&8&o!'
+  no-perm: '&7&oNo permission&8&o!'
+
+#================= INFO =================#
+#- permission -> owl.fake.jl -> allow to use fake join/leave command
+fake:
+  prefix: '&7&oFake &8| '
+  join-format: '&8[&2+&8]&7{PLAYER}'
+  leave-format: '&8[&4-&8]&7{PLAYER}'
+  no-perm: '&7&oNo permission&8&8!'
+  no-args: '&7&oNot enough args&8&o!'
+  wrong-command: '&7&oWrong command&8!'
+ 
+#================= INFO =================#
+#- permission -> owl.item.rename -> allow to use rename command
+item-rename:
+  prefix: '&7&oItemRename &8| '
+  success: '&7&oDone&8&8!'
+  fail: '&7&oFailed&8&o!'
+  no-perm: '&7&oNo permission&8&o!'
+  
+#================= INFO =================#
+#- permission to bypass -> owl.nicks.bypass -> allow to use blocked nicks
+blocked-nicks:
+  enabled: true
+  denyMessage: "&7&oNick &8| &7&oYou can't use that nick&8&o!"
+  list:
+    - Leelo
+    - Leelo0
+    - Bufnita
+    - Admin
+    - Mod
+    - Operator
+    - Helper
+    - Moderator
+    - Builder

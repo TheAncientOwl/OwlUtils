@@ -1,0 +1,22 @@
+api: 1.14.4-R0.1-SNAPSHOT
+api-version: "1.14"
+main: dev.buha007.owlutils.Main
+name: OwlUtils
+version: "1.4 for 1.14.3"
+author: Bufnita
+commands:
+  owl:
+    description: shows OwlUtils's help or reload plugin's config
+    usage: /owl <reload/help/listmessages>
+  fake:
+    description: fake join/leave for a player
+    usage: /fake <join/leave> [player]
+  rename:
+    description: rename an item
+    usage: /rename <newItemName>
+  giveall:
+    description: give to all players items
+    usage: /giveall
+  rtp:
+    description: random teleport in your world
+    usage: /rtp
